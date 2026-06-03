@@ -5,7 +5,11 @@ import { Link } from "expo-router";
 export default function HomeScreen() {
   return (
       <View style={styles.screen}>
-        <Link href="/compteur">Aller au compteur</Link>
+        <View style={styles.row}>
+            <Link href="/compteur">Compteur</Link>
+            <Link href="/minuteur">Minuteur</Link>
+            <Link href="/galerie">Galerie</Link>
+        </View>
         <CartePresentation
             prenom="Alice"
             nom="Dupont"
@@ -32,6 +36,12 @@ const styles = StyleSheet.create({
         backgroundColor: "#eef2ff",
         justifyContent: "center",
         alignItems: "center",
+        width: '100%',
+        maxWidth: 400,
         padding: 24,
+    },
+    row: {
+        flexDirection: 'row',
+        gap: 12,
     },
 });

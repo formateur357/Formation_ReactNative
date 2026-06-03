@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 export default function CompteurScreen() {
   const [count, setCount] = useState(0);
-  const [historique, setHistorique] = useState<number[]>([]);
+  const [historique, setHistorique] = useState<number[] | null>([]);
 
   useEffect(() => {
     console.log('Le composant est monte')

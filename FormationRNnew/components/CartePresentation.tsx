@@ -1,11 +1,13 @@
 import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
 import { useState } from 'react';
 
+type Ville = 'New York' | 'Paris' | 'Milan';
+
 interface CartePresentationProps {
     prenom: string;
     nom: string;
     role: string;
-    ville: string;
+    ville: Ville;
     photoUrl: string;
     onContact: () => void;
 }
@@ -64,6 +66,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         padding: 24,
         alignItems: 'center',
+        justifyContent: 'center',
     },
     avatar: {
         width: 110,
