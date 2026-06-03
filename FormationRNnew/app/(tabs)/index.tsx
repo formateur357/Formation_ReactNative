@@ -1,9 +1,11 @@
 import { Alert, View, StyleSheet } from 'react-native';
 import CartePresentation from '../../components/CartePresentation';
+import { Link } from "expo-router";
 
 export default function HomeScreen() {
   return (
       <View style={styles.screen}>
+        <Link href="/compteur">Aller au compteur</Link>
         <CartePresentation
             prenom="Alice"
             nom="Dupont"

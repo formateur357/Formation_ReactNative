@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
+import { useState } from 'react';
 
 interface CartePresentationProps {
     prenom: string;
@@ -17,8 +18,22 @@ export default function CartePresentation({
     photoUrl,
     onContact,
 }: CartePresentationProps) {
+  const [favori, setFavori] = useState(false);
+
   return (
       <View style={styles.card}>
+      <View>
+        <Text>{favori ? 'Favori' : 'Pas favori'}</Text>
+        <Pressable
+          style={({ pressed }) => [
+              styles.button,
+              pressed && styles.buttonPressed,
+          ]}
+          onPress={() => setFavori(!favori)}
+        >
+          <Text>Toggle Favori</Text>
+        </Pressable>
+      </View>
       <Image
         source={{ uri: photoUrl }}
         style={ styles.avatar }
