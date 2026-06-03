@@ -1,9 +1,29 @@
 import { View, Text, StyleSheet, Pressable } from 'react-native';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function CompteurScreen() {
   const [count, setCount] = useState(0);
   const [historique, setHistorique] = useState<number[]>([]);
+
+  useEffect(() => {
+    console.log('Le composant est monte')
+  }, []);
+
+  useEffect(() => {
+    console.log('Le compteur a change', count)
+  }, [count]);
+
+/*
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+        console.log('tick');
+    }, 1000);
+
+    return () => {
+        clearInterval(intervalId);
+    };
+  }, []);
+*/
 
   const ajouterHistorique = (ancienneValeur: number) => {
     setHistorique(prev => [ancienneValeur, ...prev].slice(0, 5));
