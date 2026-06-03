@@ -37,7 +37,7 @@ export default function CompteurScreen() {
 
   return (
       <View style={styles.screen}>
-        <Text styles={[styles.count, estPair ? styles.even : styles.odd]}>
+        <Text style={[styles.count, estPair ? styles.even : styles.odd]}>
             {count}
         </Text>
 
@@ -64,7 +64,7 @@ export default function CompteurScreen() {
             </Pressable>
         </View>
 
-        <Text styles={styles.subtitle}>Historique</Text>
+        <Text style={styles.subtitle}>Historique</Text>
         {historique.map((valeur, index) => (
             <Text key={`${valeur}-${index}`} style={styles.historyItem}>
                 {valeur}
