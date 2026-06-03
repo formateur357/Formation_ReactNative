@@ -9,6 +9,7 @@ export default function HomeScreen() {
             <Link href="/compteur">Compteur</Link>
             <Link href="/minuteur">Minuteur</Link>
             <Link href="/galerie">Galerie</Link>
+            <Link href="/panier">Panier</Link>
         </View>
         <CartePresentation
             prenom="Alice"
