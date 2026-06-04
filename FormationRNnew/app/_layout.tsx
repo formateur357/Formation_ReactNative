@@ -7,6 +7,7 @@ export default function RootLayout() {
   return (
     <Provider store={store}>
       <Stack>
+        <Stack.Screen name="index" options={{ title: 'Accueil' }} />
         <Stack.Screen name="preferences" options={{ title: 'Preferences' }} />
         <Stack.Screen name="taches" options={{ title: 'Tâches Redux' }} />
         <Stack.Screen name="compteur" options={{ title: 'Compteur' }} />
