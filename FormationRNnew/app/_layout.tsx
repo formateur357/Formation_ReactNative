@@ -1,24 +1,19 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
+import { Provider } from 'react-redux';
+import { store } from '../store';
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <Provider store={store}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
+        <Stack.Screen name="index" options={{ title: 'Accueil' }} />
+        <Stack.Screen name="taches" options={{ title: 'Tâches Redux' }} />
+        <Stack.Screen name="compteur" options={{ title: 'Compteur' }} />
+        <Stack.Screen name="minuteur" options={{ title: 'Minuteur' }} />
+        <Stack.Screen name="galerie" options={{ title: 'Galerie' }} />
+        <Stack.Screen name="panier" options={{ title: 'Panier' }} />
+        <Stack.Screen name="preferences" options={{ title: 'Preferences' }} />
       </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    </Provider>
   );
 }

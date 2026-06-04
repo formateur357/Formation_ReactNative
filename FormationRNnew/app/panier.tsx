@@ -66,7 +66,7 @@ function panierReducer(state: Produit[], action: Action): Produit[] {
     }
 }
 
-export default function PannierScreen() {
+export default function PanierScreen() {
     const [panier, dispatch] = useReducer(panierReducer, []);
 
     const total = useMemo(() => {
