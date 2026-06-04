@@ -217,6 +217,7 @@ const styles = StyleSheet.create({
 
   // Layout A
   mainContent: {
+    flex: 1,
     minHeight: 190,
     backgroundColor: '#f1f5f9',
   },
@@ -225,11 +226,13 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   bottomNav: {
+    flexDirection: 'row',
     borderTopWidth: 1,
     borderTopColor: '#e2e8f0',
     backgroundColor: 'white',
   },
   navItem: {
+    flex: 1,
     paddingVertical: 10,
     gap: 3,
   },
@@ -251,9 +254,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   grid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     padding: 8,
   },
   gridCard: {
+    width: '50%',
     padding: 8,
   },
   gridCardText: {
@@ -267,10 +273,14 @@ const styles = StyleSheet.create({
 
   // Layout C
   profileContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
     padding: 20,
     gap: 14,
   },
   avatar: {
+    alignItems: 'center',
+    justifyContent: 'center',
     width: 92,
     height: 92,
     borderRadius: 46,
@@ -287,9 +297,11 @@ const styles = StyleSheet.create({
     color: '#0f172a',
   },
   statsRow: {
+    flexDirection: 'row',
     gap: 26,
   },
   stat: {
+    alignItems: 'center',
   },
   statValue: {
     fontWeight: '900',
@@ -301,6 +313,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   profileActions: {
+    flexDirection: 'row',
     gap: 10,
   },
   primaryButton: {
@@ -326,10 +339,14 @@ const styles = StyleSheet.create({
 
   // Layout D
   messageRow: {
+
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
     paddingHorizontal: 12,
     paddingTop: 12,
   },
   messageRowMine: {
+    justifyContent: 'flex-end',
   },
   messageBubble: {
     maxWidth: '75%',
