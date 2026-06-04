@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Recettes",
+    "slug": "recettes-final-correction",
+    "version": "1.0.0",
+    "scheme": "recettes",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fff7ed"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.formation.recettes",
+      "infoPlist": {
+        "NSUserNotificationUsageDescription": "L'application peut vous rappeler l'heure de cuisiner."
+      }
+    },
+    "android": {
+      "package": "com.formation.recettes",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#fff7ed"
+      },
+      "permissions": ["POST_NOTIFICATIONS"]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#f97316"
+        }
+      ]
+    ],
+    "extra": {
+      "apiUrl": "https://www.themealdb.com/api/json/v1/1",
+      "eas": {
+        "projectId": "00000000-0000-0000-0000-000000000000"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/00000000-0000-0000-0000-000000000000"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
+  }
+}
